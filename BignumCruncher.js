@@ -1,15 +1,15 @@
 function multiply(a, b) {
   if (a === '0' || b === '0'){return '0'}
   
-  let carry = 0;
+  let carry = 0; //value for carrying remainder in multiplication and addition
   let big = '';
   let sml = '';
-  let pad = '0';
+  let pad = '0'; //value to add a zero everytime we go up by a multiple of 10 so place value is preserved
   let result = [];
   let bigArray = [];
   let final = [];
   
-  a.length > b.length ? (big = a, sml = b) : (big = b, sml = a);
+  a.length > b.length ? (big = a, sml = b) : (big = b, sml = a); //makes sure to always multiply the larger number by the smaller 
   
   for (let j = sml.length - 1; j >= 0; j--){
   //set padding to line up array nums for addition
