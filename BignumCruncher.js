@@ -55,11 +55,11 @@ function multiply(a, b) {
           carry = Math.floor(sum / 10);
         }else{carry = 0;}
 
-        n === maxLength - 1 ? final.unshift(sum) : final.unshift(sum % 10);
+        n === maxLength - 1 ? final.unshift(sum) : final.unshift(sum % 10); //places numbers in order, all numbers if final addition
 
         sum = 0;
       }
     }
   }
-  return final.join('').replace(/^0+/, '');
+  return final.join('').replace(/^0+/, ''); //removes leading 0's
 }
